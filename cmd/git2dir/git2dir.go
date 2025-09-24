@@ -19,7 +19,7 @@ func main() {
 
 // urlToDir converts a git url to a directory name, it accepts both http and ssh urls
 func urlToDir(url string) string {
-	re := regexp.MustCompile(`(?:https://|git@)(.*?)(?:/|:)(.*)\.git$`)
+	re := regexp.MustCompile(`(?:https://|git@)(.*?)(?:/|:)(.*?)(?:\.git)?$`)
 	match := re.FindStringSubmatch(url)
 	if match == nil {
 		return ""
