@@ -10,7 +10,7 @@ import (
 // main passes the first CLI argument to urlToDir and prints the result
 func main() {
 	if len(os.Args) < 2 {
-		fmt.Println("Usage: gclone <url>")
+		fmt.Printf("Usage: %s <git-url>\n", os.Args[0])
 		os.Exit(1)
 	}
 	url := os.Args[1]
